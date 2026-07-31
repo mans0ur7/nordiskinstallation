@@ -1,0 +1,31 @@
+# Netlify-konfiguration.
+# Publiserer kun mappen "public" - README.md og DNS-BACKUP.md forbliver dermed
+# private og bliver ikke lagt offentligt på nettet.
+
+[build]
+  publish = "public"
+
+# nordiskinstallation.com -> nordiskinstallation.dk (301, bevarer sti)
+[[redirects]]
+  from = "https://nordiskinstallation.com/*"
+  to = "https://nordiskinstallation.dk/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.nordiskinstallation.com/*"
+  to = "https://nordiskinstallation.dk/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://nordiskinstallation.com/*"
+  to = "https://nordiskinstallation.dk/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.nordiskinstallation.com/*"
+  to = "https://nordiskinstallation.dk/:splat"
+  status = 301
+  force = true
