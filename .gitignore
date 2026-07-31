@@ -1,0 +1,15 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Node (hvis vi senere tilføjer et build-værktøj)
+node_modules/
+dist/
+.env
+.env.*
