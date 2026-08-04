@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# /tak holdes ude af søgeresultater med noindex i selve siden — ikke med Disallow.
+# En Disallow ville forhindre crawleren i overhovedet at læse det noindex.
+
+Sitemap: https://nordiskinstallation.dk/sitemap.xml

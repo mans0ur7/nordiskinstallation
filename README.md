@@ -62,11 +62,75 @@ To ting der skal undgås:
 
 | Fil | Indhold |
 |-----|---------|
-| `public/index.html` | Selve siden (pt. tom, afventer indhold) |
+| `public/index.html` | Forside |
+| `public/ydelser.html` | Energioptimering, magnetitrensning, vandbehandling, service |
+| `public/om-os.html` | Om firmaet, værdier, dækningsområde |
+| `public/kontakt.html` | Kontaktoplysninger + formular |
+| `public/tak.html` | Kvittering efter indsendt formular |
+| `public/404.html` | Fejlside |
+| `public/assets/style.css` | Alt design — ét designsystem med CSS-variabler |
+| `public/assets/app.js` | Menu, lyskegle, scroll-indikator, indtoning |
+| `public/assets/fonts/` | To variable fonte + deres licenser |
+| `public/robots.txt`, `public/sitemap.xml` | SEO |
 | `netlify.toml` | Publish-mappe + `.com`-redirects |
 | `DNS-BACKUP.md` | DNS-tilstand før migration — sikkerhedsnet |
 
-## Næste skridt
+Sidernes URL'er er uden `.html` (`/ydelser`, `/om-os`, `/kontakt`) — det klarer Netlify selv.
 
-Siden er bevidst tom sort — infrastrukturen blev sat op først. Indhold og design mangler:
-kontaktoplysninger, ydelser, dækningsområde, CVR.
+## Design
+
+Stilretningen er **mørk og filmisk** — nærsort baggrund, store overskrifter, farve brugt
+som betydning frem for pynt:
+
+| Farve | Variabel | Betyder |
+|-------|----------|---------|
+| Mintgrøn | `--acid` | Energi — det der spares |
+| Aqua | `--aqua` | Vand — det der cirkulerer |
+| Rav | `--ember` | Varme — det der leveres |
+
+Alt styres fra tokens i toppen af `style.css`. Vil man ændre hele sidens udtryk, er det
+dér man gør det — ikke ude i de enkelte regler.
+
+Bevægelse er bundet til brugerens egen handling: lyskeglen i toppen følger markøren,
+kortene lyser op hvor musen er, indhold toner ind når man scroller ned til det. Alt
+respekterer `prefers-reduced-motion`, så brugere der har slået animationer fra i
+styresystemet får en helt rolig side.
+
+**Fonte:** Space Grotesk til overskrifter, Inter til brødtekst — begge variable og
+selvhostede fra `public/assets/fonts/` (tilsammen ca. 70 KB). De hentes altså ikke fra
+Google, hvilket både er hurtigere og undgår GDPR-problemet med at sende besøgendes
+IP-adresser til en tredjepart. Begge er udgivet under SIL Open Font License; licensteksten
+ligger ved siden af fontfilerne, som licensen kræver.
+
+Ingen scripts, billeder eller andet hentes udefra. Alle illustrationer er inline SVG.
+
+## Lokal forhåndsvisning
+
+Filerne kan ikke bare åbnes direkte i browseren, fordi links og stier er absolutte.
+Start en lokal server i stedet:
+
+```
+npx serve public
+```
+
+## Kontaktformular
+
+Formularen på `/kontakt` bruger **Netlify Forms** — ingen backend, ingen tredjepart.
+Netlify opdager formularen ved deploy, fordi den har `data-netlify="true"` og et skjult
+`form-name`-felt. Efter indsendelse sendes brugeren videre til `/tak`.
+
+Spam håndteres af et honeypot-felt (`bot-field`), som mennesker ikke kan se.
+
+**Engangsopsætning i Netlify** — indsendelser lander i Netlifys panel, men mailen skal slås
+til én gang: *Site configuration → Forms → Form notifications → Add notification →
+Email notification*. Vælg formularen `kontakt` og indtast firmaets mailadresse.
+
+Gratisplanen dækker 100 indsendelser om måneden.
+
+## Mangler stadig
+
+- **Telefonnummer** — firmaet har ikke et endnu. Siden nævner bevidst intet nummer;
+  kontakt sker via formularen og `kontakt@nordiskinstallation.dk`. Når nummeret findes,
+  skal det ind i footeren på alle sider, i kontaktlisten på `/kontakt` og i CTA-knapperne
+- **CVR-nummer** — firmaet har ikke et endnu. Skal i footeren, når det kommer
+- Rigtige billeder fra opgaver, hvis de skal erstatte illustrationerne

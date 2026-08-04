@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt — få et uforpligtende tilbud | Nordisk Installation</title>
+  <meta name="description" content="Skriv til Nordisk Installation om jeres varmeanlæg. Vi vender tilbage med en ærlig vurdering af, hvad der giver mening. Hele Sjælland." />
+  <link rel="canonical" href="https://nordiskinstallation.dk/kontakt" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="/assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/assets/style.css" />
+  <script>document.documentElement.classList.add("js")</script>
+  <meta name="theme-color" content="#040806" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="da_DK" />
+  <meta property="og:site_name" content="Nordisk Installation" />
+  <meta property="og:title" content="Kontakt — Nordisk Installation" />
+  <meta property="og:description" content="Beskriv anlægget, så vender vi tilbage med en ærlig vurdering." />
+  <meta property="og:url" content="https://nordiskinstallation.dk/kontakt" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Spring til indhold</a>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="aura" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/" aria-label="Nordisk Installation — forside">
+        <svg class="logo-mark" width="32" height="32" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="16" fill="#5ef2a4" fill-opacity=".1"/>
+          <rect x=".5" y=".5" width="63" height="63" rx="15.5" stroke="#5ef2a4" stroke-opacity=".3"/>
+          <path d="M32 14c7.6 6.4 12 13.2 12 20.5C44 43 38.6 49 32 49s-12-6-12-14.5C20 27.2 24.4 20.4 32 14Z" fill="none" stroke="#5ef2a4" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M32 25v20" stroke="#5ef2a4" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span>Nordisk <em>Installation</em></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Åbn menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="primary-nav" data-open="false" aria-label="Hovedmenu">
+        <a href="/">Forside</a>
+        <a href="/ydelser">Ydelser</a>
+        <a href="/om-os">Om os</a>
+        <a href="/kontakt" aria-current="page">Kontakt</a>
+        <a class="btn btn--primary btn--sm" href="/kontakt">Få et tilbud</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="section" style="padding-top: clamp(3rem, 7vw, 5.5rem);">
+      <div class="container contact">
+
+        <!-- ---------- Oplysninger ---------- -->
+        <div class="reveal">
+          <span class="eyebrow">Kontakt</span>
+          <h1 class="d2 fade-text">Fortæl os om jeres anlæg</h1>
+          <p class="lead" style="margin-top: 1.75rem;">
+            Udfyld formularen, så vender vi tilbage med en ærlig vurdering af, hvad der giver
+            mening at gøre — og hvad der ikke gør. Det koster ikke noget at spørge.
+          </p>
+
+          <ul class="contact-list">
+            <li>
+              <p class="ct-label">E-mail</p>
+              <p class="ct-value"><a href="mailto:kontakt@nordiskinstallation.dk">kontakt@nordiskinstallation.dk</a></p>
+            </li>
+            <li>
+              <p class="ct-label">Område</p>
+              <p class="ct-value">Hele Sjælland</p>
+              <p class="ct-note">Særligt fokus på Nordsjælland, Vestegnen og Københavnsområdet</p>
+            </li>
+            <li>
+              <p class="ct-label">Svartid</p>
+              <p class="ct-value">Typisk inden for én hverdag</p>
+            </li>
+            <li>
+              <p class="ct-label">Kunder</p>
+              <p class="ct-value">Boligforeninger · Private · Erhverv</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ---------- Formular ---------- -->
+        <div class="form-shell reveal">
+          <h2 class="d3">Få et uforpligtende tilbud</h2>
+          <p style="color: var(--text-2); font-size: .9375rem; margin: .75rem 0 2rem;">
+            Felter markeret med * skal udfyldes.
+          </p>
+
+          <!--
+            Netlify Forms: indsendelser opsamles af Netlify og sendes videre til firmaets
+            mail. Ingen backend nødvendig. "bot-field" er en skjult spamfælde.
+          -->
+          <form
+            name="kontakt"
+            method="POST"
+            action="/tak"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="kontakt" />
+            <p class="hidden-field" aria-hidden="true">
+              <label>Lad dette felt stå tomt: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+            </p>
+
+            <div class="form-grid">
+              <div class="field field--full">
+                <label for="navn">Navn *</label>
+                <input id="navn" name="navn" type="text" required autocomplete="name" />
+              </div>
+
+              <div class="field">
+                <label for="email">E-mail *</label>
+                <input id="email" name="email" type="email" required autocomplete="email" />
+              </div>
+
+              <div class="field">
+                <label for="telefon">Telefon <span class="opt">(valgfri)</span></label>
+                <input id="telefon" name="telefon" type="tel" autocomplete="tel" />
+              </div>
+
+              <div class="field">
+                <label for="kundetype">Jeg henvender mig som *</label>
+                <select id="kundetype" name="kundetype" required>
+                  <option value="">Vælg …</option>
+                  <option>Privat</option>
+                  <option>Boligforening</option>
+                  <option>Erhverv</option>
+                  <option>Andet</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="ydelse">Det drejer sig om *</label>
+                <select id="ydelse" name="ydelse" required>
+                  <option value="">Vælg …</option>
+                  <option>Energioptimering</option>
+                  <option>Magnetitrensning</option>
+                  <option>Vandbehandling</option>
+                  <option>Løbende service</option>
+                  <option>Ved ikke endnu — rådgiv mig gerne</option>
+                </select>
+              </div>
+
+              <div class="field field--full">
+                <label for="adresse">Adresse på anlægget <span class="opt">(valgfri)</span></label>
+                <input id="adresse" name="adresse" type="text" autocomplete="street-address" placeholder="Vej, postnummer og by" />
+              </div>
+
+              <div class="field field--full">
+                <label for="besked">Beskriv kort anlægget og situationen *</label>
+                <textarea id="besked" name="besked" required
+                  placeholder="Fx: fjernvarme i ejendom fra 1972, 34 lejligheder, ujævn varme på øverste etage og sort vand i filteret."></textarea>
+              </div>
+
+              <div class="field field--full">
+                <label class="consent" for="samtykke">
+                  <input id="samtykke" name="samtykke" type="checkbox" value="ja" required />
+                  <span>
+                    Jeg accepterer, at Nordisk Installation må kontakte mig om min henvendelse
+                    og opbevare oplysningerne i den forbindelse. *
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-foot">
+              <button class="btn btn--primary" type="submit">
+                Send henvendelse
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+              <span class="form-note">Oplysningerne bruges kun til at besvare henvendelsen.</span>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/">
+            <svg class="logo-mark" width="32" height="32" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+              <rect width="64" height="64" rx="16" fill="#5ef2a4" fill-opacity=".1"/>
+              <rect x=".5" y=".5" width="63" height="63" rx="15.5" stroke="#5ef2a4" stroke-opacity=".3"/>
+              <path d="M32 14c7.6 6.4 12 13.2 12 20.5C44 43 38.6 49 32 49s-12-6-12-14.5C20 27.2 24.4 20.4 32 14Z" fill="none" stroke="#5ef2a4" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M32 25v20" stroke="#5ef2a4" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <span>Nordisk <em>Installation</em></span>
+          </a>
+          <p>
+            Vi optimerer de varmeanlæg, der allerede findes — så de bruger mindre energi,
+            kører mere stabilt og holder længere. Grønne løsninger. Ærlig rådgivning.
+          </p>
+        </div>
+
+        <div>
+          <h4>Ydelser</h4>
+          <ul>
+            <li><a href="/ydelser#energioptimering">Energioptimering</a></li>
+            <li><a href="/ydelser#magnetitrensning">Magnetitrensning</a></li>
+            <li><a href="/ydelser#vandbehandling">Vandbehandling</a></li>
+            <li><a href="/ydelser#service">Løbende service</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:kontakt@nordiskinstallation.dk">kontakt@nordiskinstallation.dk</a></li>
+            <li><a href="/kontakt">Få et tilbud</a></li>
+            <li><a href="/om-os">Om os</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-word" aria-hidden="true">Nordisk<br />Installation</div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Nordisk Installation</span>
+        <span>Hele Sjælland · Nordsjælland · Vestegnen · København</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>
