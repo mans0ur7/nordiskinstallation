@@ -172,7 +172,7 @@
           <ul class="checklist">
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>Vi arbejder på <strong>hele Sjælland</strong> — med særligt fokus på Nordsjælland, Vestegnen og Københavnsområdet</span>
+              <span>Vi arbejder på <strong>hele Sjælland</strong> — hele øen, ikke kun udvalgte områder</span>
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M6 21V9l6-5 6 5v12"/><path d="M10 21v-6h4v6"/></svg>
@@ -189,27 +189,48 @@
 
         <div class="split-media reveal" aria-hidden="true">
           <svg viewBox="0 0 480 440" fill="none" role="presentation">
-            <!-- stiliseret ø -->
+            <defs>
+              <!-- Dækningen klippes til øen, så den ligger inden for kysten -->
+              <clipPath id="oe">
+                <path d="M172 62c58-14 106 8 126 54 20 46 5 102-31 141-36 39-87 51-126 27-39-24-53-76-39-127 14-51 36-80 70-95Z"/>
+              </clipPath>
+              <radialGradient id="daek" cx="50%" cy="52%" r="62%">
+                <stop offset="0%" stop-color="#5ef2a4" stop-opacity=".16"/>
+                <stop offset="100%" stop-color="#5ef2a4" stop-opacity=".03"/>
+              </radialGradient>
+            </defs>
+
+            <!-- stiliseret ø, fyldt hele vejen ud -->
+            <g clip-path="url(#oe)">
+              <rect x="80" y="40" width="260" height="270" fill="url(#daek)"/>
+              <!-- gitteret dækker øen fra kant til kant -->
+              <path d="M100 100h220M100 140h220M100 180h220M100 220h220M100 260h220"
+                    stroke="#5ef2a4" stroke-opacity=".07"/>
+              <path d="M140 40v280M180 40v280M220 40v280M260 40v280"
+                    stroke="#5ef2a4" stroke-opacity=".07"/>
+            </g>
+
             <path d="M172 62c58-14 106 8 126 54 20 46 5 102-31 141-36 39-87 51-126 27-39-24-53-76-39-127 14-51 36-80 70-95Z"
-                  stroke="#5ef2a4" stroke-opacity=".3" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M172 62c58-14 106 8 126 54 20 46 5 102-31 141-36 39-87 51-126 27-39-24-53-76-39-127 14-51 36-80 70-95Z"
-                  fill="#5ef2a4" fill-opacity=".03"/>
+                  stroke="#5ef2a4" stroke-opacity=".5" stroke-width="2.5" stroke-linejoin="round"/>
 
-            <!-- dækningspunkter -->
-            <circle cx="256" cy="150" r="10" fill="#5ef2a4"/>
-            <circle cx="256" cy="150" r="26" stroke="#5ef2a4" stroke-opacity=".3"/>
-            <circle cx="256" cy="150" r="46" stroke="#5ef2a4" stroke-opacity=".14"/>
-            <circle cx="200" cy="228" r="6" fill="#4fd6e8"/>
-            <circle cx="278" cy="248" r="6" fill="#4fd6e8"/>
-            <circle cx="222" cy="300" r="5" fill="#ffb066" fill-opacity=".8"/>
+            <!-- Dækningspunkter fordelt over hele øen — ingen områder fremhævet -->
+            <g>
+              <circle cx="170" cy="96"  r="5" fill="#5ef2a4" fill-opacity=".9"/>
+              <circle cx="216" cy="90"  r="5" fill="#4fd6e8" fill-opacity=".8"/>
+              <circle cx="138" cy="142" r="5" fill="#5ef2a4" fill-opacity=".9"/>
+              <circle cx="194" cy="136" r="5" fill="#5ef2a4" fill-opacity=".9"/>
+              <circle cx="248" cy="132" r="5" fill="#ffb066" fill-opacity=".8"/>
+              <circle cx="122" cy="192" r="5" fill="#4fd6e8" fill-opacity=".8"/>
+              <circle cx="176" cy="186" r="5" fill="#5ef2a4" fill-opacity=".9"/>
+              <circle cx="232" cy="180" r="5" fill="#5ef2a4" fill-opacity=".9"/>
+              <circle cx="272" cy="172" r="5" fill="#4fd6e8" fill-opacity=".8"/>
+              <circle cx="152" cy="236" r="5" fill="#5ef2a4" fill-opacity=".9"/>
+              <circle cx="208" cy="230" r="5" fill="#ffb066" fill-opacity=".8"/>
+              <circle cx="252" cy="220" r="5" fill="#5ef2a4" fill-opacity=".9"/>
+              <circle cx="182" cy="262" r="5" fill="#5ef2a4" fill-opacity=".9"/>
+            </g>
 
-            <path d="M256 150 200 228M256 150l22 98M200 228l22 72" stroke="#5ef2a4" stroke-opacity=".22" stroke-width="1.5" stroke-dasharray="3 6"/>
-
-            <text x="292" y="146" fill="#9db3a7" font-family="Space Grotesk, sans-serif" font-size="13">Nordsjælland</text>
-            <text x="120" y="222" fill="#8aa294" font-family="Space Grotesk, sans-serif" font-size="12">Vestegnen</text>
-            <text x="296" y="252" fill="#8aa294" font-family="Space Grotesk, sans-serif" font-size="12">København</text>
-
-            <text x="40" y="410" fill="#8aa294" font-family="Space Grotesk, sans-serif" font-size="12" letter-spacing="2">HELE SJÆLLAND</text>
+            <text x="40" y="410" fill="#8aa294" font-family="Space Grotesk, sans-serif" font-size="12" letter-spacing="2">HELE SJÆLLAND · INGEN UNDTAGELSER</text>
           </svg>
         </div>
       </div>
@@ -278,7 +299,7 @@
 
       <div class="footer-bottom">
         <span>© 2026 Nordisk Installation</span>
-        <span>Hele Sjælland · Nordsjælland · Vestegnen · København</span>
+        <span>Vi dækker hele Sjælland</span>
       </div>
     </div>
   </footer>
