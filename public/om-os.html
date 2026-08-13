@@ -7,11 +7,10 @@
   <meta name="description" content="Nordisk Installation er to specialister i energioptimering med 5–7 års erfaring. Vi optimerer eksisterende varmeanlæg på hele Sjælland — med fokus på kvalitet og ærlig rådgivning." />
   <link rel="canonical" href="https://nordiskinstallation.dk/om-os" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="preload" href="/assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/assets/style.css" />
   <script>document.documentElement.classList.add("js")</script>
-  <meta name="theme-color" content="#040806" />
+  <meta name="theme-color" content="#ffffff" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="da_DK" />
   <meta property="og:site_name" content="Nordisk Installation" />
@@ -22,16 +21,14 @@
 <body>
   <a class="skip-link" href="#main">Spring til indhold</a>
   <div class="progress" aria-hidden="true"></div>
-  <div class="aura" aria-hidden="true"><span></span><span></span><span></span></div>
 
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="/" aria-label="Nordisk Installation — forside">
         <svg class="logo-mark" width="32" height="32" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-          <rect width="64" height="64" rx="16" fill="#5ef2a4" fill-opacity=".1"/>
-          <rect x=".5" y=".5" width="63" height="63" rx="15.5" stroke="#5ef2a4" stroke-opacity=".3"/>
-          <path d="M32 14c7.6 6.4 12 13.2 12 20.5C44 43 38.6 49 32 49s-12-6-12-14.5C20 27.2 24.4 20.4 32 14Z" fill="none" stroke="#5ef2a4" stroke-width="3" stroke-linejoin="round"/>
-          <path d="M32 25v20" stroke="#5ef2a4" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
+          <rect x=".75" y=".75" width="62.5" height="62.5" rx="15.25" fill="none" stroke="#1a1a1a" stroke-opacity=".18" stroke-width="1.5"/>
+          <path d="M32 14c7.6 6.4 12 13.2 12 20.5C44 43 38.6 49 32 49s-12-6-12-14.5C20 27.2 24.4 20.4 32 14Z" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M32 25v20" stroke="#1a1a1a" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
         </svg>
         <span>Nordisk <em>Installation</em></span>
       </a>
@@ -99,28 +96,32 @@
           <svg viewBox="0 0 480 440" fill="none" role="presentation">
             <defs>
               <radialGradient id="growth" cx="50%" cy="70%" r="55%">
-                <stop offset="0%" stop-color="#5ef2a4" stop-opacity=".22"/>
-                <stop offset="100%" stop-color="#5ef2a4" stop-opacity="0"/>
+                <stop offset="0%" stop-color="#1a1a1a" stop-opacity=".22"/>
+                <stop offset="100%" stop-color="#1a1a1a" stop-opacity="0"/>
               </radialGradient>
             </defs>
             <rect width="480" height="440" fill="url(#growth)"/>
 
             <!-- stammen -->
-            <path d="M240 370V150" stroke="#5ef2a4" stroke-opacity=".55" stroke-width="3" stroke-linecap="round"/>
+            <path d="M240 370V150" stroke="#1a1a1a" stroke-opacity=".55" stroke-width="3" stroke-linecap="round"/>
 
-            <!-- bladene: det bestående der får nyt liv -->
-            <path d="M240 232c0-46 37-83 83-83 0 46-37 83-83 83Z" fill="#5ef2a4" fill-opacity=".3"/>
-            <path d="M240 232c0-46 37-83 83-83 0 46-37 83-83 83Z" stroke="#5ef2a4" stroke-opacity=".4"/>
-            <path d="M240 300c0-40-32-72-72-72 0 40 32 72 72 72Z" fill="#4fd6e8" fill-opacity=".2"/>
-            <path d="M240 300c0-40-32-72-72-72 0 40 32 72 72 72Z" stroke="#4fd6e8" stroke-opacity=".3"/>
+            <!-- bladene folder sig ud fra stammen: det bestående får nyt liv -->
+            <g class="a-leaf a-leaf--right" style="--i:0">
+              <path d="M240 232c0-46 37-83 83-83 0 46-37 83-83 83Z" fill="#1a1a1a" fill-opacity=".3"/>
+              <path d="M240 232c0-46 37-83 83-83 0 46-37 83-83 83Z" stroke="#1a1a1a" stroke-opacity=".4"/>
+            </g>
+            <g class="a-leaf a-leaf--left" style="--i:1">
+              <path d="M240 300c0-40-32-72-72-72 0 40 32 72 72 72Z" fill="#8a8a8a" fill-opacity=".2"/>
+              <path d="M240 300c0-40-32-72-72-72 0 40 32 72 72 72Z" stroke="#8a8a8a" stroke-opacity=".3"/>
+            </g>
 
-            <path d="M170 370h140" stroke="#ffffff" stroke-opacity=".12" stroke-width="2" stroke-linecap="round"/>
+            <path d="M170 370h140" stroke="#1a1a1a" stroke-opacity=".12" stroke-width="2" stroke-linecap="round"/>
 
-            <circle cx="352" cy="112" r="4" fill="#5ef2a4" fill-opacity=".5"/>
-            <circle cx="128" cy="176" r="3" fill="#4fd6e8" fill-opacity=".4"/>
-            <circle cx="392" cy="248" r="2.5" fill="#ffb066" fill-opacity=".4"/>
+            <circle class="a-float" style="--i:0" cx="352" cy="112" r="4" fill="#1a1a1a" fill-opacity=".5"/>
+            <circle class="a-float" style="--i:1" cx="128" cy="176" r="3" fill="#8a8a8a" fill-opacity=".4"/>
+            <circle class="a-float" style="--i:2" cx="392" cy="248" r="2.5" fill="#b4b4b4" fill-opacity=".4"/>
 
-            <text x="40" y="410" fill="#8aa294" font-family="Space Grotesk, sans-serif" font-size="12" letter-spacing="2">OPTIMERE FREM FOR AT UDSKIFTE</text>
+            <text x="40" y="410" fill="#767676" font-family="Inter, sans-serif" font-size="12" letter-spacing="2">OPTIMERE FREM FOR AT UDSKIFTE</text>
           </svg>
         </div>
       </div>
@@ -195,8 +196,8 @@
                 <path d="M172 62c58-14 106 8 126 54 20 46 5 102-31 141-36 39-87 51-126 27-39-24-53-76-39-127 14-51 36-80 70-95Z"/>
               </clipPath>
               <radialGradient id="daek" cx="50%" cy="52%" r="62%">
-                <stop offset="0%" stop-color="#5ef2a4" stop-opacity=".16"/>
-                <stop offset="100%" stop-color="#5ef2a4" stop-opacity=".03"/>
+                <stop offset="0%" stop-color="#1a1a1a" stop-opacity=".16"/>
+                <stop offset="100%" stop-color="#1a1a1a" stop-opacity=".03"/>
               </radialGradient>
             </defs>
 
@@ -205,32 +206,33 @@
               <rect x="80" y="40" width="260" height="270" fill="url(#daek)"/>
               <!-- gitteret dækker øen fra kant til kant -->
               <path d="M100 100h220M100 140h220M100 180h220M100 220h220M100 260h220"
-                    stroke="#5ef2a4" stroke-opacity=".07"/>
+                    stroke="#1a1a1a" stroke-opacity=".07"/>
               <path d="M140 40v280M180 40v280M220 40v280M260 40v280"
-                    stroke="#5ef2a4" stroke-opacity=".07"/>
+                    stroke="#1a1a1a" stroke-opacity=".07"/>
             </g>
 
             <path d="M172 62c58-14 106 8 126 54 20 46 5 102-31 141-36 39-87 51-126 27-39-24-53-76-39-127 14-51 36-80 70-95Z"
-                  stroke="#5ef2a4" stroke-opacity=".5" stroke-width="2.5" stroke-linejoin="round"/>
+                  stroke="#1a1a1a" stroke-opacity=".5" stroke-width="2.5" stroke-linejoin="round"/>
 
-            <!-- Dækningspunkter fordelt over hele øen — ingen områder fremhævet -->
+            <!-- Dækningspunkterne tændes i en bølge fra nord mod syd —
+                 hele øen, ét område ad gangen, uden at fremhæve nogen -->
             <g>
-              <circle cx="170" cy="96"  r="5" fill="#5ef2a4" fill-opacity=".9"/>
-              <circle cx="216" cy="90"  r="5" fill="#4fd6e8" fill-opacity=".8"/>
-              <circle cx="138" cy="142" r="5" fill="#5ef2a4" fill-opacity=".9"/>
-              <circle cx="194" cy="136" r="5" fill="#5ef2a4" fill-opacity=".9"/>
-              <circle cx="248" cy="132" r="5" fill="#ffb066" fill-opacity=".8"/>
-              <circle cx="122" cy="192" r="5" fill="#4fd6e8" fill-opacity=".8"/>
-              <circle cx="176" cy="186" r="5" fill="#5ef2a4" fill-opacity=".9"/>
-              <circle cx="232" cy="180" r="5" fill="#5ef2a4" fill-opacity=".9"/>
-              <circle cx="272" cy="172" r="5" fill="#4fd6e8" fill-opacity=".8"/>
-              <circle cx="152" cy="236" r="5" fill="#5ef2a4" fill-opacity=".9"/>
-              <circle cx="208" cy="230" r="5" fill="#ffb066" fill-opacity=".8"/>
-              <circle cx="252" cy="220" r="5" fill="#5ef2a4" fill-opacity=".9"/>
-              <circle cx="182" cy="262" r="5" fill="#5ef2a4" fill-opacity=".9"/>
+              <circle class="a-dot" style="--i:0"  cx="216" cy="90"  r="5" fill="#8a8a8a" fill-opacity=".8"/>
+              <circle class="a-dot" style="--i:1"  cx="170" cy="96"  r="5" fill="#1a1a1a" fill-opacity=".9"/>
+              <circle class="a-dot" style="--i:2"  cx="248" cy="132" r="5" fill="#b4b4b4" fill-opacity=".8"/>
+              <circle class="a-dot" style="--i:3"  cx="194" cy="136" r="5" fill="#1a1a1a" fill-opacity=".9"/>
+              <circle class="a-dot" style="--i:4"  cx="138" cy="142" r="5" fill="#1a1a1a" fill-opacity=".9"/>
+              <circle class="a-dot" style="--i:5"  cx="272" cy="172" r="5" fill="#8a8a8a" fill-opacity=".8"/>
+              <circle class="a-dot" style="--i:6"  cx="232" cy="180" r="5" fill="#1a1a1a" fill-opacity=".9"/>
+              <circle class="a-dot" style="--i:7"  cx="176" cy="186" r="5" fill="#1a1a1a" fill-opacity=".9"/>
+              <circle class="a-dot" style="--i:8"  cx="122" cy="192" r="5" fill="#8a8a8a" fill-opacity=".8"/>
+              <circle class="a-dot" style="--i:9"  cx="252" cy="220" r="5" fill="#1a1a1a" fill-opacity=".9"/>
+              <circle class="a-dot" style="--i:10" cx="208" cy="230" r="5" fill="#b4b4b4" fill-opacity=".8"/>
+              <circle class="a-dot" style="--i:11" cx="152" cy="236" r="5" fill="#1a1a1a" fill-opacity=".9"/>
+              <circle class="a-dot" style="--i:12" cx="182" cy="262" r="5" fill="#1a1a1a" fill-opacity=".9"/>
             </g>
 
-            <text x="40" y="410" fill="#8aa294" font-family="Space Grotesk, sans-serif" font-size="12" letter-spacing="2">HELE SJÆLLAND · INGEN UNDTAGELSER</text>
+            <text x="40" y="410" fill="#767676" font-family="Inter, sans-serif" font-size="12" letter-spacing="2">HELE SJÆLLAND · INGEN UNDTAGELSER</text>
           </svg>
         </div>
       </div>
@@ -262,10 +264,9 @@
         <div>
           <a class="logo" href="/">
             <svg class="logo-mark" width="32" height="32" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-              <rect width="64" height="64" rx="16" fill="#5ef2a4" fill-opacity=".1"/>
-              <rect x=".5" y=".5" width="63" height="63" rx="15.5" stroke="#5ef2a4" stroke-opacity=".3"/>
-              <path d="M32 14c7.6 6.4 12 13.2 12 20.5C44 43 38.6 49 32 49s-12-6-12-14.5C20 27.2 24.4 20.4 32 14Z" fill="none" stroke="#5ef2a4" stroke-width="3" stroke-linejoin="round"/>
-              <path d="M32 25v20" stroke="#5ef2a4" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
+              <rect x=".75" y=".75" width="62.5" height="62.5" rx="15.25" fill="none" stroke="#1a1a1a" stroke-opacity=".18" stroke-width="1.5"/>
+          <path d="M32 14c7.6 6.4 12 13.2 12 20.5C44 43 38.6 49 32 49s-12-6-12-14.5C20 27.2 24.4 20.4 32 14Z" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M32 25v20" stroke="#1a1a1a" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
             </svg>
             <span>Nordisk <em>Installation</em></span>
           </a>

@@ -7,11 +7,10 @@
   <meta name="description" content="Nordisk Installation optimerer eksisterende varmeanlæg for boligforeninger, private og virksomheder. Lavere varmeudgifter og længere levetid — ofte uden store investeringer." />
   <link rel="canonical" href="https://nordiskinstallation.dk/" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="preload" href="/assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/assets/style.css" />
   <script>document.documentElement.classList.add("js")</script>
-  <meta name="theme-color" content="#040806" />
+  <meta name="theme-color" content="#ffffff" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="da_DK" />
   <meta property="og:site_name" content="Nordisk Installation" />
@@ -22,16 +21,14 @@
 <body>
   <a class="skip-link" href="#main">Spring til indhold</a>
   <div class="progress" aria-hidden="true"></div>
-  <div class="aura" aria-hidden="true"><span></span><span></span><span></span></div>
 
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="/" aria-label="Nordisk Installation — forside">
         <svg class="logo-mark" width="32" height="32" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-          <rect width="64" height="64" rx="16" fill="#5ef2a4" fill-opacity=".1"/>
-          <rect x=".5" y=".5" width="63" height="63" rx="15.5" stroke="#5ef2a4" stroke-opacity=".3"/>
-          <path d="M32 14c7.6 6.4 12 13.2 12 20.5C44 43 38.6 49 32 49s-12-6-12-14.5C20 27.2 24.4 20.4 32 14Z" fill="none" stroke="#5ef2a4" stroke-width="3" stroke-linejoin="round"/>
-          <path d="M32 25v20" stroke="#5ef2a4" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
+          <rect x=".75" y=".75" width="62.5" height="62.5" rx="15.25" fill="none" stroke="#1a1a1a" stroke-opacity=".18" stroke-width="1.5"/>
+          <path d="M32 14c7.6 6.4 12 13.2 12 20.5C44 43 38.6 49 32 49s-12-6-12-14.5C20 27.2 24.4 20.4 32 14Z" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M32 25v20" stroke="#1a1a1a" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
         </svg>
         <span>Nordisk <em>Installation</em></span>
       </a>
@@ -222,12 +219,12 @@
           <svg viewBox="0 0 480 440" fill="none" role="presentation">
             <defs>
               <radialGradient id="pull" cx="50%" cy="52%" r="46%">
-                <stop offset="0%" stop-color="#ffb066" stop-opacity=".3"/>
-                <stop offset="100%" stop-color="#ffb066" stop-opacity="0"/>
+                <stop offset="0%" stop-color="#b4b4b4" stop-opacity=".3"/>
+                <stop offset="100%" stop-color="#b4b4b4" stop-opacity="0"/>
               </radialGradient>
               <linearGradient id="tube" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#5ef2a4" stop-opacity=".55"/>
-                <stop offset="100%" stop-color="#5ef2a4" stop-opacity=".1"/>
+                <stop offset="0%" stop-color="#1a1a1a" stop-opacity=".55"/>
+                <stop offset="100%" stop-color="#1a1a1a" stop-opacity=".1"/>
               </linearGradient>
               <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
                 <feGaussianBlur stdDeviation="9"/>
@@ -237,35 +234,38 @@
             <rect width="480" height="440" fill="url(#pull)"/>
 
             <!-- kredsløbet ind og ud -->
-            <path d="M30 140h130a56 56 0 0 1 56 56v0" stroke="#5ef2a4" stroke-opacity=".22" stroke-width="2"/>
-            <path d="M450 300H320a56 56 0 0 1-56-56v0" stroke="#5ef2a4" stroke-opacity=".22" stroke-width="2"/>
+            <path d="M30 140h130a56 56 0 0 1 56 56v0" stroke="#1a1a1a" stroke-opacity=".22" stroke-width="2"/>
+            <path d="M450 300H320a56 56 0 0 1-56-56v0" stroke="#1a1a1a" stroke-opacity=".22" stroke-width="2"/>
 
             <!-- filterhuset -->
             <rect x="180" y="128" width="120" height="184" rx="52" stroke="url(#tube)" stroke-width="2.5"/>
-            <rect x="196" y="146" width="88" height="148" rx="40" stroke="#5ef2a4" stroke-opacity=".12" stroke-width="1.5"/>
+            <rect x="196" y="146" width="88" height="148" rx="40" stroke="#1a1a1a" stroke-opacity=".12" stroke-width="1.5"/>
 
             <!-- magnetstaven -->
-            <path d="M240 150v92" stroke="#ffb066" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="240" cy="248" r="34" fill="#ffb066" fill-opacity=".14" filter="url(#soft)"/>
+            <path d="M240 150v92" stroke="#b4b4b4" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
+            <circle class="a-magnet" cx="240" cy="248" r="34" fill="#b4b4b4" fill-opacity=".14" filter="url(#soft)"/>
 
-            <!-- opsamlet magnetit -->
-            <circle cx="240" cy="258" r="21" fill="#030805"/>
-            <circle cx="219" cy="270" r="13" fill="#030805"/>
-            <circle cx="261" cy="266" r="15" fill="#030805"/>
-            <circle cx="240" cy="258" r="21" stroke="#ffb066" stroke-opacity=".28"/>
-            <circle cx="219" cy="270" r="13" stroke="#ffb066" stroke-opacity=".2"/>
-            <circle cx="261" cy="266" r="15" stroke="#ffb066" stroke-opacity=".2"/>
+            <!-- den opsamlede magnetit vokser, efterhånden som den fanges -->
+            <g class="a-catch">
+              <circle cx="240" cy="258" r="21" fill="#1a1a1a"/>
+              <circle cx="219" cy="270" r="13" fill="#1a1a1a"/>
+              <circle cx="261" cy="266" r="15" fill="#1a1a1a"/>
+              <circle cx="240" cy="258" r="21" stroke="#b4b4b4" stroke-opacity=".28"/>
+              <circle cx="219" cy="270" r="13" stroke="#b4b4b4" stroke-opacity=".2"/>
+              <circle cx="261" cy="266" r="15" stroke="#b4b4b4" stroke-opacity=".2"/>
+            </g>
 
-            <!-- partikler på vej ind -->
-            <circle cx="132" cy="140" r="4.5" fill="#ffffff" fill-opacity=".2"/>
-            <circle cx="86"  cy="140" r="3"   fill="#ffffff" fill-opacity=".13"/>
-            <circle cx="378" cy="300" r="3.5" fill="#5ef2a4" fill-opacity=".35"/>
-            <circle cx="418" cy="300" r="2.5" fill="#5ef2a4" fill-opacity=".22"/>
+            <!-- urene partikler driver ind fra venstre -->
+            <circle class="a-flow-in"  style="--i:0" cx="132" cy="140" r="4.5" fill="#1a1a1a" fill-opacity=".2"/>
+            <circle class="a-flow-in"  style="--i:1" cx="86"  cy="140" r="3"   fill="#1a1a1a" fill-opacity=".13"/>
+            <!-- rent vand løber ud til højre -->
+            <circle class="a-flow-out" style="--i:0" cx="378" cy="300" r="3.5" fill="#1a1a1a" fill-opacity=".35"/>
+            <circle class="a-flow-out" style="--i:1" cx="418" cy="300" r="2.5" fill="#1a1a1a" fill-opacity=".22"/>
 
             <!-- rent vand ud -->
-            <path d="M264 244h0" stroke="#5ef2a4"/>
-            <text x="30" y="176" fill="#8aa294" font-family="Space Grotesk, sans-serif" font-size="12" letter-spacing="2">IND · URENT</text>
-            <text x="358" y="336" fill="#8aa294" font-family="Space Grotesk, sans-serif" font-size="12" letter-spacing="2">UD · RENT</text>
+            <path d="M264 244h0" stroke="#1a1a1a"/>
+            <text x="30" y="176" fill="#767676" font-family="Inter, sans-serif" font-size="12" letter-spacing="2">IND · URENT</text>
+            <text x="358" y="336" fill="#767676" font-family="Inter, sans-serif" font-size="12" letter-spacing="2">UD · RENT</text>
           </svg>
         </div>
       </div>
@@ -325,47 +325,51 @@
           <svg viewBox="0 0 480 440" fill="none" role="presentation">
             <defs>
               <linearGradient id="b1" x1="0" y1="1" x2="0" y2="0">
-                <stop offset="0%" stop-color="#5ef2a4" stop-opacity=".08"/>
-                <stop offset="100%" stop-color="#5ef2a4" stop-opacity=".55"/>
+                <stop offset="0%" stop-color="#1a1a1a" stop-opacity=".08"/>
+                <stop offset="100%" stop-color="#1a1a1a" stop-opacity=".55"/>
               </linearGradient>
               <linearGradient id="b2" x1="0" y1="1" x2="0" y2="0">
-                <stop offset="0%" stop-color="#4fd6e8" stop-opacity=".08"/>
-                <stop offset="100%" stop-color="#4fd6e8" stop-opacity=".45"/>
+                <stop offset="0%" stop-color="#8a8a8a" stop-opacity=".08"/>
+                <stop offset="100%" stop-color="#8a8a8a" stop-opacity=".45"/>
               </linearGradient>
               <linearGradient id="b3" x1="0" y1="1" x2="0" y2="0">
-                <stop offset="0%" stop-color="#ffb066" stop-opacity=".08"/>
-                <stop offset="100%" stop-color="#ffb066" stop-opacity=".45"/>
+                <stop offset="0%" stop-color="#b4b4b4" stop-opacity=".08"/>
+                <stop offset="100%" stop-color="#b4b4b4" stop-opacity=".45"/>
               </linearGradient>
             </defs>
 
             <!-- gitterlinjer -->
-            <path d="M60 340h360M60 260h360M60 180h360" stroke="#ffffff" stroke-opacity=".05"/>
-            <path d="M60 340V96" stroke="#ffffff" stroke-opacity=".08"/>
+            <path d="M60 340h360M60 260h360M60 180h360" stroke="#1a1a1a" stroke-opacity=".05"/>
+            <path d="M60 340V96" stroke="#1a1a1a" stroke-opacity=".08"/>
 
-            <!-- stablede søjler: energi + vedligehold + levetid -->
-            <rect x="104" y="212" width="66" height="128" rx="8" fill="url(#b1)"/>
-            <rect x="104" y="168" width="66" height="40"  rx="8" fill="url(#b2)"/>
-            <rect x="104" y="128" width="66" height="36"  rx="8" fill="url(#b3)"/>
+            <!-- søjlerne rejser sig fra grundlinjen, gruppe for gruppe -->
+            <g class="a-bars" style="--i:0">
+              <rect x="104" y="212" width="66" height="128" rx="8" fill="url(#b1)"/>
+              <rect x="104" y="168" width="66" height="40"  rx="8" fill="url(#b2)"/>
+              <rect x="104" y="128" width="66" height="36"  rx="8" fill="url(#b3)"/>
+            </g>
+            <g class="a-bars" style="--i:1">
+              <rect x="207" y="246" width="66" height="94" rx="8" fill="url(#b1)"/>
+              <rect x="207" y="214" width="66" height="28" rx="8" fill="url(#b2)"/>
+              <rect x="207" y="188" width="66" height="22" rx="8" fill="url(#b3)"/>
+            </g>
+            <g class="a-bars" style="--i:2">
+              <rect x="310" y="274" width="66" height="66" rx="8" fill="url(#b1)"/>
+              <rect x="310" y="252" width="66" height="18" rx="8" fill="url(#b2)"/>
+              <rect x="310" y="234" width="66" height="14" rx="8" fill="url(#b3)"/>
+            </g>
 
-            <rect x="207" y="246" width="66" height="94" rx="8" fill="url(#b1)"/>
-            <rect x="207" y="214" width="66" height="28" rx="8" fill="url(#b2)"/>
-            <rect x="207" y="188" width="66" height="22" rx="8" fill="url(#b3)"/>
+            <!-- den faldende samlede omkostning tegner sig ind -->
+            <path class="a-trend" d="M137 108 240 172l103 54" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-opacity=".8"/>
+            <circle class="a-node" style="--i:0" cx="137" cy="108" r="5" fill="#1a1a1a"/>
+            <circle class="a-node" style="--i:1" cx="240" cy="172" r="5" fill="#1a1a1a"/>
+            <circle class="a-node" style="--i:2" cx="343" cy="226" r="5" fill="#1a1a1a"/>
 
-            <rect x="310" y="274" width="66" height="66" rx="8" fill="url(#b1)"/>
-            <rect x="310" y="252" width="66" height="18" rx="8" fill="url(#b2)"/>
-            <rect x="310" y="234" width="66" height="14" rx="8" fill="url(#b3)"/>
+            <text x="104" y="372" fill="#767676" font-family="Inter, sans-serif" font-size="13">I dag</text>
+            <text x="207" y="372" fill="#767676" font-family="Inter, sans-serif" font-size="13">Renset</text>
+            <text x="310" y="372" fill="#767676" font-family="Inter, sans-serif" font-size="13">I drift</text>
 
-            <!-- den faldende samlede omkostning -->
-            <path d="M137 108 240 172l103 54" stroke="#5ef2a4" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 8" stroke-opacity=".8"/>
-            <circle cx="137" cy="108" r="5" fill="#5ef2a4"/>
-            <circle cx="240" cy="172" r="5" fill="#5ef2a4"/>
-            <circle cx="343" cy="226" r="5" fill="#5ef2a4"/>
-
-            <text x="104" y="372" fill="#8aa294" font-family="Space Grotesk, sans-serif" font-size="13">I dag</text>
-            <text x="207" y="372" fill="#8aa294" font-family="Space Grotesk, sans-serif" font-size="13">Renset</text>
-            <text x="310" y="372" fill="#8aa294" font-family="Space Grotesk, sans-serif" font-size="13">I drift</text>
-
-            <text x="60" y="404" fill="#8aa294" font-family="Space Grotesk, sans-serif" font-size="11" letter-spacing="1.5">ENERGI · VEDLIGEHOLD · LEVETID</text>
+            <text x="60" y="404" fill="#767676" font-family="Inter, sans-serif" font-size="11" letter-spacing="1.5">ENERGI · VEDLIGEHOLD · LEVETID</text>
           </svg>
         </div>
       </div>
@@ -402,10 +406,9 @@
         <div>
           <a class="logo" href="/">
             <svg class="logo-mark" width="32" height="32" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-              <rect width="64" height="64" rx="16" fill="#5ef2a4" fill-opacity=".1"/>
-              <rect x=".5" y=".5" width="63" height="63" rx="15.5" stroke="#5ef2a4" stroke-opacity=".3"/>
-              <path d="M32 14c7.6 6.4 12 13.2 12 20.5C44 43 38.6 49 32 49s-12-6-12-14.5C20 27.2 24.4 20.4 32 14Z" fill="none" stroke="#5ef2a4" stroke-width="3" stroke-linejoin="round"/>
-              <path d="M32 25v20" stroke="#5ef2a4" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
+              <rect x=".75" y=".75" width="62.5" height="62.5" rx="15.25" fill="none" stroke="#1a1a1a" stroke-opacity=".18" stroke-width="1.5"/>
+          <path d="M32 14c7.6 6.4 12 13.2 12 20.5C44 43 38.6 49 32 49s-12-6-12-14.5C20 27.2 24.4 20.4 32 14Z" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M32 25v20" stroke="#1a1a1a" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
             </svg>
             <span>Nordisk <em>Installation</em></span>
           </a>
