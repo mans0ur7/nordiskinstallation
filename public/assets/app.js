@@ -118,6 +118,11 @@
         if (!entry.isIntersecting) return;
         entry.target.classList.add("is-visible");
         observer.unobserve(entry.target);
+        // Ryd stagger-forsinkelsen når indtoningen er ovre — ellers
+        // forsinker den også alle senere hover-transitions på elementet.
+        window.setTimeout(function () {
+          entry.target.style.removeProperty("transition-delay");
+        }, 1600);
       });
     },
     { rootMargin: "0px 0px -10% 0px", threshold: 0.06 }
@@ -127,7 +132,7 @@
     // Elementer i samme række må ikke ramme helt samtidig — det virker mekanisk.
     var group = el.parentElement;
     var index = group ? Array.prototype.indexOf.call(group.children, el) : 0;
-    el.style.transitionDelay = Math.min(index, 5) * 80 + "ms";
+    el.style.transitionDelay = Math.min(index, 5) * 110 + "ms";
     observer.observe(el);
   });
 })();

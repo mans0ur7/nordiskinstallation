@@ -79,28 +79,31 @@ Sidernes URL'er er uden `.html` (`/ydelser`, `/om-os`, `/kontakt`) — det klare
 
 ## Design
 
-Stilretningen er **mørk og filmisk** — nærsort baggrund, store overskrifter, farve brugt
-som betydning frem for pynt:
+Stilretningen hedder **FREMLØB / RETUR** og er hentet direkte fra faget: ethvert dansk
+varmeanlæg er mærket rød for fremløb og blå for retur. Det er sidens farvemodel —
+kobber-orange mod dyb blå på varmt tegningspapir, med blåsort tusch til tekst:
 
 | Farve | Variabel | Betyder |
 |-------|----------|---------|
-| Mintgrøn | `--acid` | Energi — det der spares |
-| Aqua | `--aqua` | Vand — det der cirkulerer |
-| Rav | `--ember` | Varme — det der leveres |
+| Kobber-orange | `--hot` / `--hot-ink` | Fremløb — varmen, energien, CTA'er |
+| Dyb blå | `--cold` / `--cold-ink` | Retur — vandet, kulden |
+| Blåsort | `--ink` | Tusch — tekst og streger |
+| Varmt papir | `--paper` | Grundfladen, med et fint milimeterpapir-gitter |
 
-Alt styres fra tokens i toppen af `style.css`. Vil man ændre hele sidens udtryk, er det
-dér man gør det — ikke ude i de enkelte regler.
+Alt styres fra tokens i toppen af `style.css`. Udtrykket er "teknisk tegning":
+mono-annoteringer, sigtekorn i hjørnerne, hårde offset-skygger som lag i en tegning,
+og en rørkreds i heroen hvor fremløbs- og returflow kører live.
 
-Bevægelse er bundet til brugerens egen handling: lyskeglen i toppen følger markøren,
-kortene lyser op hvor musen er, indhold toner ind når man scroller ned til det. Alt
-respekterer `prefers-reduced-motion`, så brugere der har slået animationer fra i
-styresystemet får en helt rolig side.
+Bevægelsen er tydelig med vilje: overskriftens linjer stiger op ved indlæsning,
+flowet i rørkredsen kører konstant, illustrationerne animerer det de handler om
+(varme stiger, magnetit synker, visere går rundt). Alt starter først når feltet er
+scrollet ind, og alt respekterer `prefers-reduced-motion` med en synlig hviletilstand.
 
-**Fonte:** Space Grotesk til overskrifter, Inter til brødtekst — begge variable og
-selvhostede fra `public/assets/fonts/` (tilsammen ca. 70 KB). De hentes altså ikke fra
-Google, hvilket både er hurtigere og undgår GDPR-problemet med at sende besøgendes
-IP-adresser til en tredjepart. Begge er udgivet under SIL Open Font License; licensteksten
-ligger ved siden af fontfilerne, som licensen kræver.
+**Fonte:** Bricolage Grotesque til overskrifter, Inter til brødtekst og JetBrains Mono
+til tekniske annoteringer — alle variable og selvhostede fra `public/assets/fonts/`
+(tilsammen ca. 165 KB). De hentes altså ikke fra Google, hvilket både er hurtigere og
+undgår GDPR-problemet med at sende besøgendes IP-adresser til en tredjepart. Alle tre er
+udgivet under SIL Open Font License; licensteksterne ligger ved siden af fontfilerne.
 
 Ingen scripts, billeder eller andet hentes udefra. Alle illustrationer er inline SVG.
 
