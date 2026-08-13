@@ -193,45 +193,63 @@
         <div class="split-media reveal" aria-hidden="true">
           <svg viewBox="0 0 480 440" fill="none" role="presentation">
             <defs>
-              <!-- Dækningen klippes til øen, så den ligger inden for kysten -->
+              <!-- Dækningen (gitter + tone + prikker) klippes til Sjælland;
+                   resten af Danmark står som svag kontekst-kontur -->
               <clipPath id="oe">
-                <path d="M172 62c58-14 106 8 126 54 20 46 5 102-31 141-36 39-87 51-126 27-39-24-53-76-39-127 14-51 36-80 70-95Z"/>
+                <path d="M262 223 Q256 220 264 216 L284 222 L300 226 L303 238 Q305 244 308 236 L311 226 L344 216 Q352 214 358 220 L366 228 L365 252 Q354 268 344 274 Q352 286 358 292 Q362 298 354 304 L332 318 L308 326 Q292 330 282 320 L272 300 L262 272 L246 262 Q240 258 248 254 L262 250 L264 238 Z"/>
               </clipPath>
-              <radialGradient id="daek" cx="50%" cy="52%" r="62%">
+              <radialGradient id="daek" cx="50%" cy="45%" r="70%">
                 <stop offset="0%" stop-color="#131c2e" stop-opacity=".16"/>
                 <stop offset="100%" stop-color="#131c2e" stop-opacity=".03"/>
               </radialGradient>
             </defs>
 
-            <!-- stiliseret ø, fyldt hele vejen ud -->
+            <!-- Jylland — konteksten, svag kontur -->
+            <path d="M235 66 Q241 60 237 74 L233 94 L217 135 L224 148 L217 173 Q222 180 232 184 L256 190 Q263 196 254 202 L226 210 L214 218 L204 245 Q198 258 204 268 L201 300 L195 322 L192 333 Q186 340 174 337 L136 333 Q118 330 107 315 L99 280 L77 271 Q70 268 76 258 L82 190 L85 164 L108 124 Q112 118 120 116 L196 80 Q216 70 235 66 Z"
+                  stroke="#131c2e" stroke-opacity=".26" stroke-width="2" stroke-linejoin="round"/>
+            <!-- Limfjorden -->
+            <path d="M90 156 L214 140" stroke="#131c2e" stroke-opacity=".18" stroke-width="2"/>
+
+            <!-- Fyn -->
+            <path d="M208 292 Q212 274 230 270 Q252 268 258 288 Q262 305 244 315 Q228 325 212 316 Q202 307 208 292 Z"
+                  stroke="#131c2e" stroke-opacity=".26" stroke-width="2" stroke-linejoin="round"/>
+
+            <!-- Lolland-Falster -->
+            <path d="M284 342 Q300 336 322 340 L342 344 Q350 348 342 354 Q314 362 292 356 Q278 352 284 342 Z"
+                  stroke="#131c2e" stroke-opacity=".26" stroke-width="2" stroke-linejoin="round"/>
+
+            <!-- Bornholm -->
+            <path d="M446 306 l10 -6 l8 8 l-4 10 l-12 2 Z"
+                  stroke="#131c2e" stroke-opacity=".26" stroke-width="2" stroke-linejoin="round"/>
+
+            <!-- Sjælland — dækningen, fyldt hele vejen ud til kysten -->
             <g clip-path="url(#oe)">
-              <rect x="80" y="40" width="260" height="270" fill="url(#daek)"/>
-              <!-- gitteret dækker øen fra kant til kant -->
-              <path d="M100 100h220M100 140h220M100 180h220M100 220h220M100 260h220"
-                    stroke="#131c2e" stroke-opacity=".07"/>
-              <path d="M140 40v280M180 40v280M220 40v280M260 40v280"
-                    stroke="#131c2e" stroke-opacity=".07"/>
+              <rect x="236" y="208" width="136" height="128" fill="url(#daek)"/>
+              <path d="M240 224h130M240 248h130M240 272h130M240 296h130M240 320h130"
+                    stroke="#131c2e" stroke-opacity=".08"/>
+              <path d="M256 210v124M280 210v124M304 210v124M328 210v124M352 210v124"
+                    stroke="#131c2e" stroke-opacity=".08"/>
             </g>
 
-            <path d="M172 62c58-14 106 8 126 54 20 46 5 102-31 141-36 39-87 51-126 27-39-24-53-76-39-127 14-51 36-80 70-95Z"
-                  stroke="#131c2e" stroke-opacity=".5" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M262 223 Q256 220 264 216 L284 222 L300 226 L303 238 Q305 244 308 236 L311 226 L344 216 Q352 214 358 220 L366 228 L365 252 Q354 268 344 274 Q352 286 358 292 Q362 298 354 304 L332 318 L308 326 Q292 330 282 320 L272 300 L262 272 L246 262 Q240 258 248 254 L262 250 L264 238 Z"
+                  stroke="#131c2e" stroke-opacity=".65" stroke-width="2.5" stroke-linejoin="round"/>
 
             <!-- Dækningspunkterne tændes i en bølge fra nord mod syd —
-                 hele øen, ét område ad gangen, uden at fremhæve nogen -->
+                 kun på Sjælland, uden at fremhæve nogen egn -->
             <g>
-              <circle class="a-dot" style="--i:0"  cx="216" cy="90"  r="5" fill="#2456d6" fill-opacity=".8"/>
-              <circle class="a-dot" style="--i:1"  cx="170" cy="96"  r="5" fill="#131c2e" fill-opacity=".9"/>
-              <circle class="a-dot" style="--i:2"  cx="248" cy="132" r="5" fill="#e4572e" fill-opacity=".8"/>
-              <circle class="a-dot" style="--i:3"  cx="194" cy="136" r="5" fill="#131c2e" fill-opacity=".9"/>
-              <circle class="a-dot" style="--i:4"  cx="138" cy="142" r="5" fill="#131c2e" fill-opacity=".9"/>
-              <circle class="a-dot" style="--i:5"  cx="272" cy="172" r="5" fill="#2456d6" fill-opacity=".8"/>
-              <circle class="a-dot" style="--i:6"  cx="232" cy="180" r="5" fill="#131c2e" fill-opacity=".9"/>
-              <circle class="a-dot" style="--i:7"  cx="176" cy="186" r="5" fill="#131c2e" fill-opacity=".9"/>
-              <circle class="a-dot" style="--i:8"  cx="122" cy="192" r="5" fill="#2456d6" fill-opacity=".8"/>
-              <circle class="a-dot" style="--i:9"  cx="252" cy="220" r="5" fill="#131c2e" fill-opacity=".9"/>
-              <circle class="a-dot" style="--i:10" cx="208" cy="230" r="5" fill="#e4572e" fill-opacity=".8"/>
-              <circle class="a-dot" style="--i:11" cx="152" cy="236" r="5" fill="#131c2e" fill-opacity=".9"/>
-              <circle class="a-dot" style="--i:12" cx="182" cy="262" r="5" fill="#131c2e" fill-opacity=".9"/>
+              <circle class="a-dot" style="--i:0"  cx="300" cy="232" r="4.5" fill="#2456d6" fill-opacity=".8"/>
+              <circle class="a-dot" style="--i:1"  cx="338" cy="226" r="4.5" fill="#131c2e" fill-opacity=".9"/>
+              <circle class="a-dot" style="--i:2"  cx="356" cy="238" r="4.5" fill="#e4572e" fill-opacity=".85"/>
+              <circle class="a-dot" style="--i:3"  cx="276" cy="246" r="4.5" fill="#131c2e" fill-opacity=".9"/>
+              <circle class="a-dot" style="--i:4"  cx="322" cy="250" r="4.5" fill="#131c2e" fill-opacity=".9"/>
+              <circle class="a-dot" style="--i:5"  cx="352" cy="262" r="4.5" fill="#e4572e" fill-opacity=".85"/>
+              <circle class="a-dot" style="--i:6"  cx="296" cy="262" r="4.5" fill="#2456d6" fill-opacity=".8"/>
+              <circle class="a-dot" style="--i:7"  cx="332" cy="280" r="4.5" fill="#131c2e" fill-opacity=".9"/>
+              <circle class="a-dot" style="--i:8"  cx="272" cy="278" r="4.5" fill="#131c2e" fill-opacity=".9"/>
+              <circle class="a-dot" style="--i:9"  cx="306" cy="292" r="4.5" fill="#2456d6" fill-opacity=".8"/>
+              <circle class="a-dot" style="--i:10" cx="342" cy="296" r="4.5" fill="#131c2e" fill-opacity=".9"/>
+              <circle class="a-dot" style="--i:11" cx="288" cy="302" r="4.5" fill="#e4572e" fill-opacity=".85"/>
+              <circle class="a-dot" style="--i:12" cx="318" cy="312" r="4.5" fill="#131c2e" fill-opacity=".9"/>
             </g>
 
             <text x="40" y="410" fill="#5d6a83" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="2">HELE SJÆLLAND · INGEN UNDTAGELSER</text>
